@@ -1,0 +1,19 @@
+<h1>New Skill</h1>
+
+<%= form_for @skill do |f| %>
+  <p><%= f.label :name %></p>
+  <p><%= f.text_field :name, required: true %></p>
+
+  <p><%= f.label :description %></p>
+  <p><%= f.text_field :description, required: true %></p>
+
+  <p><%= f.label :category %></p>
+  <%= f.radio_button :category, "general" %>
+  <%= f.label :category_general, "General" %>
+  <%= f.radio_button :category, "engineering" %>
+  <%= f.label :category_engineering, "Engineering" %>
+
+  <br />
+  <%= link_to 'Cancel', skills_path %>
+  <%= f.submit "Create new skill" %>
+<% end %>

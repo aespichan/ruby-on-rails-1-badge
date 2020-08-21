@@ -1,0 +1,18 @@
+<p>Name: </p>
+<p><%= @user.name %></p>
+<p>Email: </p>
+<p><%= @user.email %></p>
+
+<% if @user.skills.length == 0 %>
+  <p>No skills assigned to this user</p>
+<% else %>
+  <table>
+    <tr>
+      <th>skills</th>
+      <th>status</th>
+    </tr>
+  </table>
+<% end %>
+
+
+

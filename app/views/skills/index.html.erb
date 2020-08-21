@@ -1,0 +1,15 @@
+<h1>Skills</h1>
+<table>
+  <tr>
+    <th>name</th>
+    <th>category</th>
+    <th>Actions</th>
+  </tr>
+  <% @skills.map do |skill| %>
+    <tr>
+      <td><%= skill.name %></td>
+      <td><%= skill.category %></td>
+    </tr>
+  <% end %>
+<table>
+<%= link_to 'New skill', new_skill_path %>
